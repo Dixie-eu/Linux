@@ -17,3 +17,19 @@ passwd user1 (wachtwoord = root)
 passwd user2 (wachtwoord = root)
 smbpasswd -a user1 (wachtwoord = root)
 smbpasswd -a user2 (wachtwootd = root)
+groupadd groep a
+groupadd groep b
+usermod -g groepa user1
+usermod -g groepb user2
+id user1
+id user2
+chgrp groepa share1
+chgrp groepb share2
+chmod 770 share1
+chmod 770 share2
+ls -l
+systemctl restart smb.service
+systemctl restart nmb.service
+systemctl stop firewalld.service
+ip a (ip adres kopieren)
+ga naar windows > map network drive > \\ip adres\share1 (login met credentials)
