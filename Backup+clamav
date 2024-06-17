@@ -1,0 +1,22 @@
+zypper install clamav
+freshclam
+clamscan /home/share1
+clamscan /home/share2
+clamscan /home
+cd /home
+cd /tmp
+mkdir backup
+ls
+cd /home
+vi backup.sh
+rsync -av /home/share1 /tmp/backup
+rsync -av /home/share2 /tmp/backup
+rsync -av /home /tmp/backup
+ls
+cat backup.sh
+chmod +x backup.sh
+./backup.sh
+ls /tmp/backup
+crontab -e
+0 0 * * * /home/backup.sh
+crontab -l
