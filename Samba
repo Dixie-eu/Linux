@@ -1,3 +1,4 @@
+zypper install samba
 cd /home
 mkdir share1
 mkdir share2
