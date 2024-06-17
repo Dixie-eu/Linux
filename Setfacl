@@ -1,0 +1,8 @@
+ls -l 
+setfacl -m g:groepa:r-x share2
+setfacl -m g:groepb:r-x share1
+systemctl stop firewalld.service
+systemctl start smb.service
+systemctl start nmb.service
+(eventueel kan je nog usermod -g groepa user1 en chgrp groepa share1 proberen)
+in windows map network drive share1 met user2 en probeer een bestand te maken (screenshot foutmelding)
