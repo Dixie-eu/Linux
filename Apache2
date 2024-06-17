@@ -1,0 +1,12 @@
+Zypper install apache2
+systemctl start apache2.service
+cd /srv/www/htdocs
+vi index.html
+Typ iets zoals "Welcome to Bowdy's website"
+:wq!
+ip a (ip adres kopieren)
+vi /etc/hosts
+onder localhost ip adres invullen en naam van website zoals bowdy.local
+systemctl stop firewalld.service
+typ je ip adres in bij firefox in linux
+typ je ip adres in bij edge in windows
